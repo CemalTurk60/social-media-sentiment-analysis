@@ -1,0 +1,36 @@
+
+        ================================================
+        PROJE ANALİZ RAPORU (OTOMATİK OLUŞTURULDU)
+        Tarih: 2025-12-10 01:08
+        ================================================
+        
+        1. GENEL İSTATİSTİKLER
+        ----------------------
+        Toplam Analiz Edilen Yorum: 380
+        
+        2. DUYGU ANALİZİ SONUÇLARI
+        --------------------------
+        Olumlu Yorumlar: 99 (%26.1)
+        Olumsuz Yorumlar: 10 (%2.6)
+        Nötr Yorumlar:   271 (%71.3)
+        
+        3. EN DİKKAT ÇEKEN YORUM (En Çok Beğeni Alan)
+        ---------------------------------------------
+        Yazar: @sempereadem0
+        Beğeni: 162
+        Duygu: Nötr
+        Yorum: "Enes abim, sana güvenerek Anker Q30 aldım ve gayet memnunum. Objektif yorumlarınla sektöre yön vermen beni çok mutlu ediyor. Tam gaz devam <3"
+        
+        4. VERİTABANI DURUMU
+        --------------------
+        Veriler 'tez_veritabani.db' içerisindeki 'yorumlar' tablosuna başarıyla yedeklendi.
+        
+        5. SONUÇ VE ÖNERİ
+        -----------------
+        Bu analiz, sözlük tabanlı Türkçe NLP yöntemleri kullanılarak gerçekleştirilmiştir.
+        Kullanıcıların genel eğilimi incelendiğinde en sık kullanılan kelimelerin ürün performansı
+        ile ilişkili olduğu görülmüştür.
+        
+        ================================================
+        Cemalettin Türk - YBS Bitirme Projesi
+        
