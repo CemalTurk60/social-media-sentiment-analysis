@@ -4,37 +4,37 @@ Bu proje, sosyal medya verilerini (YouTube) analiz ederek teknolojik ürünler h
 
 ![Dashboard Önizleme](profesyonel_dashboard.png)
 
-## 🚀 Proje Durumu: FAZ 1 (TAMAMLANDI)
+## 🚀 Proje Durumu: FAZ 2 (TAMAMLANDI) ✅
 
-Bu aşamada **ETL (Extract, Transform, Load)** süreci ve temel analiz motoru başarıyla kurulmuştur.
+Proje, temel analizden **Derin Öğrenme (Deep Learning)** aşamasına geçmiştir.
 
-### ✅ Tamamlanan Özellikler
-- **Veri Madenciliği:** YouTube Data API v3 ile büyük veri setlerinin otomatik çekilmesi (Pagination algoritması ile).
-- **Veri Tabanı Mimarisi:** Çekilen ve işlenen verilerin **SQLite** veritabanında yapısal olarak saklanması.
-- **NLP Motoru (v1.0):** Türkçe için özel geliştirilmiş **Sözlük Tabanlı (Dictionary-Based)** duygu analizi algoritması.
-- **Görselleştirme:** Seaborn ve Matplotlib kullanılarak oluşturulan 6 panelli Yönetici Dashboard'u.
-- **Otomatik Raporlama:** Her analiz sonrası `.txt` formatında yönetici özeti çıkarma.
+### ✅ Tamamlanan Özellikler (Hafta 1 & 2)
+- **Çoklu Ürün Veri Madenciliği:** YouTube API ile 5 farklı ürünün (iPhone 15, S24 vb.) verileri otomatik çekilmektedir.
+- **Sosyal Medya Simülasyonu:** Instagram ve Twitter verileri, istatistiksel yöntemlerle simüle edilerek veri seti 2000+ satıra çıkarılmıştır.
+- **Hibrit Yapay Zeka Mimarisi:**
+  - **Model 1 (Baseline):** Logistic Regression (Makine Öğrenmesi) - %82 Doğruluk.
+  - **Model 2 (Advanced):** **BERT (bert-base-turkish-sentiment-cased)** modeli ile bağlam duyarlı derin analiz.
+- **Veri Tabanı Mimarisi:** SQLite ve Excel entegrasyonu.
 
 ## 🛠️ Teknoloji Yığını
 | Alan | Teknoloji | Kullanım Amacı |
 |------|-----------|----------------|
+| **AI / ML** | **PyTorch, Transformers (BERT)** | Derin Öğrenme ve Duygu Analizi |
+| **Model** | Scikit-Learn | Lojistik Regresyon ve TF-IDF |
 | **Dil** | Python 3.12 | Ana geliştirme dili |
 | **Veri** | Pandas, NumPy | Veri manipülasyonu ve temizlik |
-| **NLP** | Regex, Custom Lexicon | Metin işleme ve duygu skorlama |
-| **DB** | SQLite3 | Veri saklama ve sorgulama |
 | **Görsel**| Seaborn, Matplotlib | Veri görselleştirme |
-| **API** | Google Client Lib | Veri çekme servisi |
 
-## 📊 Analiz Metodolojisi
-1. **Data Ingestion:** Video ID üzerinden tüm yorumlar çekilir.
-2. **Preprocessing:** Stop-words temizliği, noktalama işaretleri ve lowercase dönüşümü.
-3. **Scoring:** Pozitif/Negatif kelime havuzuna göre `Polarity Score` (-1 ile +1 arası) hesaplanır.
-4. **Storage:** İşlenen veri SQL tablosuna `INSERT` edilir.
+## 📊 Analiz Süreci
+1. **Data Ingestion:** YouTube yorumları çekilir + Sosyal medya verileri simüle edilir.
+2. **Preprocessing:** Stop-words temizliği, NLP teknikleri.
+3. **AI Analysis:** Veriler BERT modelinden geçirilerek "Olumlu/Olumsuz" olarak etiketlenir.
+4. **Reporting:** Sonuçlar Excel ve Veritabanına işlenir.
 
-## 🔜 Gelecek Hedefler (Faz 2)
-- [ ] BERT (Bidirectional Encoder Representations) modelinin entegrasyonu.
-- [ ] Web Arayüzü (Streamlit) ile canlı kullanım.
-- [ ] Rakip analizi modülü.
+## 🔜 Gelecek Hedefler (Faz 3)
+- [ ] **Streamlit Dashboard:** Tüm verilerin web arayüzünde sunulması.
+- [ ] **Rakip Analizi:** iPhone vs Samsung karşılaştırma grafikleri.
+- [ ] **Canlı Filtreleme:** Platform bazlı (Twitter/Instagram/YouTube) filtreler.
 
 ---
 *Geliştirici: Cemalettin Türk | Yönetim Bilişim Sistemleri*
