@@ -1,36 +1,34 @@
 
-        ================================================
-        PROJE ANALİZ RAPORU (OTOMATİK OLUŞTURULDU)
-        Tarih: 2025-12-10 03:28
-        ================================================
-        
-        1. GENEL İSTATİSTİKLER
-        ----------------------
-        Toplam Analiz Edilen Yorum: 380
-        
-        2. DUYGU ANALİZİ SONUÇLARI
-        --------------------------
-        Olumlu Yorumlar: 99 (%26.1)
-        Olumsuz Yorumlar: 10 (%2.6)
-        Nötr Yorumlar:   271 (%71.3)
-        
-        3. EN DİKKAT ÇEKEN YORUM (En Çok Beğeni Alan)
-        ---------------------------------------------
-        Yazar: @sempereadem0
-        Beğeni: 162
-        Duygu: Nötr
-        Yorum: "Enes abim, sana güvenerek Anker Q30 aldım ve gayet memnunum. Objektif yorumlarınla sektöre yön vermen beni çok mutlu ediyor. Tam gaz devam <3"
-        
-        4. VERİTABANI DURUMU
-        --------------------
-        Veriler 'tez_veritabani.db' içerisindeki 'yorumlar' tablosuna başarıyla yedeklendi.
-        
-        5. SONUÇ VE ÖNERİ
-        -----------------
-        Bu analiz, sözlük tabanlı Türkçe NLP yöntemleri kullanılarak gerçekleştirilmiştir.
-        Kullanıcıların genel eğilimi incelendiğinde en sık kullanılan kelimelerin ürün performansı
-        ile ilişkili olduğu görülmüştür.
-        
-        ================================================
-        Cemalettin Türk - YBS Bitirme Projesi
-        
+================================================
+PROJE ANALİZ RAPORU (GÜNCEL - FAZ 2)
+Tarih: 2025-12-17 03:58
+================================================
+
+1. GENEL İSTATİSTİKLER (GÜNCELLENDİ)
+----------------------
+Toplam Analiz Edilen Yeri: 1917 Adet
+Kapsam: Çoklu Ürün (iPhone, Samsung, Dyson vb.) + Sosyal Medya Simülasyonu
+
+2. YAPAY ZEKA (BERT) SONUÇLARI
+--------------------------
+🟢 Olumlu Yorumlar: 812 (%42.4)
+🔴 Olumsuz Yorumlar: 1105 (%57.6)
+
+Dikkat: Olumsuz yorum sayısındaki artış, modelin şikayetleri
+başarıyla tespit ettiğini ve simülasyon verilerinin (Twitter) etkisini gösterir.
+
+3. KULLANILAN TEKNOLOJİ
+--------------------
+Eski Yöntem: Sözlük Tabanlı (İPTAL EDİLDİ)
+Yeni Yöntem: Hugging Face BERT (Derin Öğrenme)
+Model Adı: savasy/bert-base-turkish-sentiment-cased
+
+4. SONUÇ VE ÖNERİ
+-----------------
+Bu analiz, sadece kelimeleri sayan basit yöntemler yerine,
+cümlenin bağlamını anlayan BERT modeli ile yapılmıştır.
+Elde edilen 1105 adet olumsuz geri bildirim, firmalar için
+kritik Ar-Ge verisi niteliğindedir.
+
+================================================
+Cemalettin Türk - YBS Bitirme Projesi
