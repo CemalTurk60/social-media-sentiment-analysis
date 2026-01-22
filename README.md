@@ -102,7 +102,7 @@ python tez_egitim_baslat.py
 
 ---
 ## 📜 Lisans
-Bu proje MIT Lisansı altında yayınlanmıştır.
+Bu proje MIS Lisansı altında yayınlanmıştır.
 
 ## 📧 İletişim
 **Cemalettin Türk** - Yönetim Bilişim Sistemleri
