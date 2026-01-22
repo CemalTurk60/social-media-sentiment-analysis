@@ -1,6 +1,14 @@
+# --- Sistem Dosyalari ---
 venv/
 __pycache__/
-*.xlsx
-*.db
-*.png
 .env
+*.db
+
+# --- DEVASA DOSYALAR (MUTLAKA EKLE!) ---
+# Burasi cok onemli, yoksa yukleme hata verir.
+final_model/
+sonuclar/
+
+# --- IZIN VERILENLER (Bunlari engelleme!) ---
+# *.png  <-- Bunu sildik/yorum satiri yaptik. Cunku grafiklerin gorunsun istiyoruz!
+# *.xlsx <-- Bunu sildik. Sonuclar Excel tablosu olarak gorunsun.
