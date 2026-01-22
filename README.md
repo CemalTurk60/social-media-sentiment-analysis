@@ -1,149 +1,113 @@
-# 📱 Ürün Yorumları Duygu Analizi: Geleneksel Yöntemden Yapay Zekaya Geçiş
+# 🇹🇷 Türkçe Ürün Yorumları Duygu Analizi: Geleneksel Yöntemden Deep Learning'e
 
-Bu proje, e-ticaret yorumlarını analiz etmek için başlatılmış, süreç içerisinde **Basit Makine Öğrenmesi** yöntemlerinden **İleri Seviye Derin Öğrenme (BERT)** teknolojisine evrilmiş kapsamlı bir veri bilimi çalışmasıdır.
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Model](https://img.shields.io/badge/Model-BERT-green)
+![Status](https://img.shields.io/badge/Status-Tamamlandı-success)
+![Accuracy](https://img.shields.io/badge/Accuracy-%2587.60-brightgreen)
+
+Bu proje, **Yönetim Bilişim Sistemleri** bitirme projesi kapsamında geliştirilmiş; e-ticaret ve YouTube yorumlarını analiz etmek için **Basit Makine Öğrenmesi** yöntemlerinden **İleri Seviye Derin Öğrenme (BERT)** teknolojisine evrilmiş kapsamlı bir veri bilimi çalışmasıdır.
 
 ---
 
-## 📅 FAZ 1: Başlangıç (Geleneksel Yöntem)
+## 📈 Projenin Evrimi (Gelişim Hikayesi)
+
+Proje, akademik süreç boyunca üç ana aşamadan geçerek bugünkü profesyonel haline ulaşmıştır:
+
+### 📅 FAZ 1: Başlangıç (Geleneksel Yöntem)
 Projenin ilk aşamasında sözlük tabanlı yöntemler ve Lojistik Regresyon kullanılmıştır.
 * **Yaklaşım:** Kelime sayma (Lexicon-based).
+* **Veri:** ~1.900 Yorum.
+* **Sonuç:** %68 Başarı.
+* **Problem:** Bağlamı (Context) anlayamıyordu. Örneğin *"Güzel değil"* cümlesini, içinde "güzel" geçtiği için olumlu sanıyordu.
+* **Görsel:** *Eski versiyon analiz grafikleri (dashboard_v1_eski.png)*
+
+### 🚀 FAZ 2: Geçiş Dönemi (Streamlit & Simülasyon)
+Ara yüz geliştirmeleri ve hazır modellerin denendiği aşamadır.
+* **Teknoloji:** Streamlit Dashboard.
 * **Sonuç:** %82 Başarı.
-* **Eksiklik:** "Güzel değil" cümlesini "Güzel" kelimesinden dolayı olumlu sanıyordu.
+* **Eksiklik:** Veri seti yetersizliği ve simüle edilmiş veriler kullanılması.
+* **Görsel:** *Streamlit arayüz çalışması (dashboard_v2_final.png)*
 
-**🔻 V1 - İlk Analiz Grafiği:**
-![Eski Versiyon](dashboard_v1_eski.png)
-
----
-
-## 🚀 FAZ 2: Final (Yapay Zeka & BERT Devrimi)
-Hataları gidermek için proje **Hugging Face BERT** modeli ile yeniden tasarlandı.
-* **Yaklaşım:** Cümlenin bağlamını (Context) anlayan Yapay Zeka.
-* **Yenilik:** Twitter/Instagram simülasyonu eklendi.
-* **Teknoloji:** Streamlit ile İnteraktif Dashboard kuruldu.
-
-**🔻 V2 - Profesyonel Analiz Paneli (Final):**
-![Final Versiyon](dashboard_v2_final.png)
+### 🏆 FAZ 3: FİNAL (Yapay Zeka & BERT Fine-Tuning) - *ŞU ANKİ HALİ*
+Proje, veri setinin **10.000 adede** çıkarılması ve Google'ın BERT modelinin bu verilerle **sıfırdan eğitilmesi (Fine-Tuning)** ile zirveye ulaştı.
+* **Veri Kaynağı:** YouTube API (Gerçek yorumlar) + Kaggle (E-Ticaret verileri).
+* **Yöntem:** Semi-Supervised Learning (Yarı Denetimli Öğrenme).
+* **Sonuç:** **%87.60 Doğruluk (Accuracy)**.
 
 ---
 
-## 📊 Proje Özellikleri
-1.  **Çoklu Veri Çekimi:** iPhone, Samsung, Dyson vb.
-2.  **Akıllı Duygu Analizi:** * ✅ "Telefon güzel değil" -> **Olumsuz** (Doğru tespit)
-    * ✅ Güven Skoru hesaplama.
-3.  **Canlı Dashboard:** Ürün filtreleme ve dinamik grafikler.
+## 📊 Final Başarı Sonuçları
+
+Model, **3.000 adetlik test verisi** (modelin daha önce hiç görmediği veriler) üzerinde test edilmiştir:
+
+| Metrik | Değer |
+|:---:|:---:|
+| **Doğruluk (Accuracy)** | **%87.60** |
+| **Model** | BERT (bert-base-turkish-cased) |
+| **Eğitim Verisi** | 7.000 Adet |
+| **Test Verisi** | 3.000 Adet |
+
+### 🖼️ Başarı Grafiği (Confusion Matrix)
+Modelin hangi sınıfları ne kadar doğru tahmin ettiğini gösteren matris:
+![Confusion Matrix](bert_confusion_matrix.png)
 
 ---
 
-## 📈 Proje İstatistikleri
+## 📂 Dosya Yapısı ve Kodlar
 
-### Veri Seti:
-- **6 Farklı Ürün:** iPhone 15, Samsung S24, MacBook Air, AirPods Pro, Dyson Süpürge, Kulaklık
-- **Toplam Yorum:** 1,917 adet
-- **Gerçek Veri:** YouTube (1,400+)
-- **Simüle Veri:** Twitter/Instagram (500+)
+Bu depoda projenin final haline ait kodlar bulunmaktadır:
 
-### Model Performansı:
-| Metrik | Sözlük Tabanlı | BERT |
-|--------|---------------|------|
-| Accuracy | %68 | %82-85 |
-| Context Anlama | ❌ | ✅ |
-| Negasyon Tespiti | ❌ | ✅ |
+* **`tez_egitim_baslat.py`**: 🧠 **Beyin (Eğitim Kodu).** 10.000 veriyi işler, BERT modelini eğitir ve `final_model` klasörünü oluşturur.
+* **`results_report.py`**: 📊 **Karne (Raporlama).** Eğitilen modeli test eder, Accuracy skorunu hesaplar ve başarı grafiklerini (Confusion Matrix) çizer.
+* **`canli_test_arayuz.py`**: 🖥️ **Uygulama (GUI).** Windows üzerinde çalışan, yazdığınız cümlenin duygusunu anlık tahmin eden masaüstü yazılımı.
+* **`scraper_multi.py`**: 🤖 **Veri Botu.** YouTube üzerinden (PS5, Dyson vb.) gerçek kullanıcı yorumlarını çeken bot yazılımı.
+* **`ham_veriler/`**: Projede kullanılan eğitim ve test veri setlerini içerir.
 
-### Teknoloji Stack:
-```
-Python 3.11
-├── Veri Toplama: YouTube Data API v3
-├── NLP: Hugging Face Transformers (BERT)
-├── Görselleştirme: Streamlit + Plotly
-├── Veritabanı: SQLite
-└── ML: scikit-learn, torch
-```
 ---
 
 ## 🎮 Kullanım Kılavuzu
 
-### 1. Dashboard Başlatma:
+Projeyi kendi bilgisayarınızda çalıştırmak için adımları izleyin:
+
+### 1. Gerekli Kütüphaneler
 ```bash
-streamlit run dashboard.py
+pip install torch transformers pandas scikit-learn matplotlib seaborn tk accelerate openpyxl
 ```
-Tarayıcıda `http://localhost:8501` açılır.
+### 2. Canlı Test (Arayüzü Açmak İçin)
+Eğitilmiş modeli denemek ve sohbet etmek için şu komutu çalıştırın:
+```bash
+python canli_test_arayuz.py
+```
+### 3. Modeli Tekrar Eğitmek İçin
+Eğer kendi verinizle sıfırdan eğitim yapmak isterseniz:
+```bash
+python tez_egitim_baslat.py
+```
+## 🔬 Metodoloji Detayları
 
-### 2. Ürün Seçme:
-Sol taraftaki sidebar'dan ürün seçin:
-- iPhone 15
-- Samsung S24
-- MacBook Air
-- AirPods Pro
-- Dyson Süpürge
-- Kulaklık
+1.  **Veri Toplama:**
+    * **YouTube:** PS5, Dyson, iPhone videolarından API ile gerçek yorumlar çekildi.
+    * **Kaggle:** Türkçe e-ticaret veri setleri ile veri havuzu 10.000'e tamamlandı.
+    * *(Not: Eski simülasyon verileri yerine tamamen gerçek veriler kullanılmıştır)*
 
-### 3. Sonuçları İnceleme:
-- **Pasta Grafiği:** Genel duygu dağılımı
-- **Güven Skoru:** BERT'ün tahmin kesinliği
-- **Örnek Yorumlar:** Gerçek kullanıcı geri bildirimleri
+2.  **Etiketleme (Labeling):**
+    * Verilerin bir kısmı elle, büyük kısmı ise **Semi-Supervised Learning** (Lojistik Regresyon ile ön tahmin) yöntemiyle etiketlenip insan kontrolünden geçirildi.
+
+3.  **Model Eğitimi:**
+    * **Base Model:** `dbmdz/bert-base-turkish-cased`
+    * **Epoch:** 2
+    * **Batch Size:** 8/16
+    * **Optimizer:** AdamW
 
 ---
----
-
 ## 📜 Lisans
 Bu proje MIT Lisansı altında yayınlanmıştır.
 
 ## 📧 İletişim
-**Cemalettin Türk**
+**Cemalettin Türk** - Yönetim Bilişim Sistemleri
 - GitHub: [@CemalTurk60](https://github.com/CemalTurk60)
 - Email: cemalcanturk6060@gmail.com
 
 ---
+*Bu proje akademik bir çalışma olup, ticari amaç gütmemektedir.*
 
-## 🙏 Teşekkürler
-Bu proje Yönetim Bilişim Sistemleri bölümü bitirme projesi kapsamında geliştirilmiştir.
-
-**Kullanılan Açık Kaynak Projeler:**
-- Hugging Face Transformers
-- Streamlit
-- Plotly
-- scikit-learn
-
----
-
-**⭐ Bu projeyi beğendiyseniz yıldız vermeyi unutmayın!**
-```
-
-5. METODOLOJİ
--------------
-a) Veri Toplama:
-   - YouTube Data API v3 kullanılarak 6 farklı teknoloji ürününden
-     inceleme videolarının yorumları otomatik olarak çekilmiştir.
-   - Twitter ve Instagram API'lerinin maliyet kısıtları nedeniyle,
-     gerçek YouTube verilerinden türetilmiş simülasyon verisi üretilmiştir.
-   - Simüle veriler "simule_mi = True" etiketi ile açıkça işaretlenmiştir.
-
-b) Veri Ön İşleme:
-   - Stop-words temizliği (Türkçe için özelleştirilmiş)
-   - Emoji ve özel karakter filtreleme
-   - Lowercase normalizasyonu
-   - Tokenization (BERT tokenizer)
-
-c) Model Eğitimi:
-   - Pre-trained model: savasy/bert-base-turkish-sentiment-cased
-   - Fine-tuning: 200 manuel etiketlenmiş yorum
-   - Validation split: %80 train, %20 test
-   - Optimizer: AdamW
-   - Learning rate: 2e-5
-   - Epochs: 3
-
-d) Değerlendirme:
-   - Accuracy: %82-85
-   - Precision (Olumlu): %84
-   - Recall (Olumlu): %80
-   - F1-Score: %82
-   - Confusion Matrix analizi yapılmıştır
-```
-
-
-## 📂 Kurulum
-```bash
-pip install -r requirements.txt
-streamlit run dashboard.py
-
-*Geliştirici: Cemalettin Türk | Yönetim Bilişim Sistemleri*
