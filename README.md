@@ -18,15 +18,16 @@ Projenin ilk aşamasında sözlük tabanlı yöntemler ve Lojistik Regresyon kul
 * **Yaklaşım:** Kelime sayma (Lexicon-based).
 * **Veri:** ~1.900 Yorum.
 * **Sonuç:** %68 Başarı.
-* **Problem:** Bağlamı (Context) anlayamıyordu. Örneğin *"Güzel değil"* cümlesini, içinde "güzel" geçtiği için olumlu sanıyordu.
-* **Görsel:** *Eski versiyon analiz grafikleri (dashboard_v1_eski.png)*
+* **Problem:** Bağlamı (Context) anlayamıyordu.
+* **Eski Versiyon Görüntüsü:**
+![Eski Versiyon](dashboard_v1_eski.png)
 
 ### 🚀 FAZ 2: Geçiş Dönemi (Streamlit & Simülasyon)
 Ara yüz geliştirmeleri ve hazır modellerin denendiği aşamadır.
 * **Teknoloji:** Streamlit Dashboard.
 * **Sonuç:** %82 Başarı.
-* **Eksiklik:** Veri seti yetersizliği ve simüle edilmiş veriler kullanılması.
-* **Görsel:** *Streamlit arayüz çalışması (dashboard_v2_final.png)*
+* **Ara Yüz Geliştirme:**
+![Gecis Donemi](dashboard_v2_final.png)
 
 ### 🏆 FAZ 3: FİNAL (Yapay Zeka & BERT Fine-Tuning) - *ŞU ANKİ HALİ*
 Proje, veri setinin **10.000 adede** çıkarılması ve Google'ın BERT modelinin bu verilerle **sıfırdan eğitilmesi (Fine-Tuning)** ile zirveye ulaştı.
